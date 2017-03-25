@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+	<%- include('partials/head') %>
+
+	<body>
+
+		<div class="container">
+
+			<div class="row">
+
+				<form class="col s4 push-s4 pull-s4" action="/users/login" method="post">
+
+					<div class="input-field">
+						<input id="username" type="text" name="username" class="validate" required>
+						<label for="username">Username</label>
+					</div>
+
+					<div class="input-field">
+						<input id="password" type="password" name="password" class="validate" required>
+						<label for="password">Password</label>
+					</div>
+
+					<button class="btn col s12" style="margin-bottom: 10px;" type="submit" value="login"> LOGIN </button>
+					<a href="/users/register" class="col s12 center">New? REGISTER</a>
+
+				</form>
+
+			</div>
+			<div class=row>
+			</div>
+
+		</div>
+
+	</body>
+
+</html>

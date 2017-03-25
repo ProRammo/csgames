@@ -1,20 +1,7 @@
 <!DOCTYPE html>
 <html>
 
-	<head>
-		<title>app</title>
-		<link rel='stylesheet' href='/stylesheets/style.css' />
-		<!-- MATERIALIZE CSS -->
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
-
-		<!-- JQUERY -->
-  		<script src="http://code.jquery.com/jquery-3.1.1.min.js" 
-				integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-  				crossorigin="anonymous"></script>
-		<!-- MATERIALIZE JS -->
-
-  		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
-	</head>
+	<%- include('partials/head') %>
 
 	<body>
 
@@ -22,22 +9,12 @@
 
 			<div class="row">
 
-				<form class="col s4 push-s4 pull-s4" action="/users/login" method="post">
+				<h1 class="col s12 center-align">welcome</h1>
 
-					<div class="input-field">
-						<input id="username" type="text" name="username" class="validate" required>
-						<label for="username">Username</label>
-					</div>
-
-					<div class="input-field">
-						<input id="password" type="password" name="password" class="validate" required>
-						<label for="password">Password</label>
-					</div>
-
-					<button class="btn right" type="submit" value="login"> LOGIN </button>
-
-				</form>
-
+				<div class="col s12 center">
+					<a href="/users/login"><button class="btn" style="margin-left:10px;" href="/users/login"> LOGIN </button></a>
+					<a href="/users/register"><button class="btn" href="/users/register"> REGISTER </button></a>
+				</div>
 
 			</div>
 
