@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+	<%- include('partials/head') %>
+
+	<body>
+
+		<%- include('partials/navbar', {links:[ {text: "Profile", url:"/users/"+user.username}, {text: "Logout", url: "/users/logout"} ]}) %>
+
+
+		<div class="container">
+
+			<div class="row">
+
+				<h1 class="col s12 center-align">Welcome <%= user.username %></h1>
+
+			</div>
+
+		</div>
+
+	</body>
+
+</html>

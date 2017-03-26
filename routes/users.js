@@ -18,6 +18,10 @@ router.get('/register', function(req, res, next){
 	res.render('register', {errors: []});
 });
 
+router.get('/:name', function(req, res, next) {
+	res.render('index', {});
+});
+
 router.post('/register', function(req, res, next){
 
 	let email = req.body.email;
@@ -94,8 +98,9 @@ passport.deserializeUser(function(id, done) {
 });
 
 router.post('/login',
-  			passport.authenticate('local', {successRedirect:'/', failureRedirect:'/users/login',failureFlash: true}),
+  			passport.authenticate('local'),
   			function(req, res) {
+  				console.log(res.data);
     			res.redirect('/');
   			});
 
