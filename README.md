@@ -1,4 +1,4 @@
-#CoolVid
+# CoolVid
 
 ## About
 This is a video sharing website where users can login and share videos with each other
