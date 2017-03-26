@@ -10,7 +10,7 @@ They are able to view profile pages
     * There is a user name
     
 # Search
-Able to search things with the search bar. It also looks nice.
+Added search bar. It looks nice.
 
 # Video
 Videos are saved in a database. 
