@@ -18,10 +18,6 @@ router.get('/register', function(req, res, next){
 	res.render('register', {errors: []});
 });
 
-router.get('/:name', function(req, res, next) {
-	res.render('index', {});
-});
-
 router.post('/register', function(req, res, next){
 
 	let email = req.body.email;
@@ -110,6 +106,15 @@ router.get('/logout', function(req, res){
 	req.flash('success_msg', 'You are logged out');
 
 	res.redirect('/users/login');
+});
+
+router.get('/:name', function(req, res, next) {
+
+	User.findOne({username: req.params.name})
+		.exec(function(err, user){
+			res.render('profile-page', {username: req.params.name});
+		});
+
 });
 
 module.exports = router;

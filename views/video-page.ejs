@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+	<%- include('partials/head') %>
+
+	<body>
+
+		<%- include('partials/navbar', {links:[ {text: "Home", url:"/"}, {text: "Logout", url: "/users/logout"} ]}) %>
+
+		<div class="container">
+
+			<div class="row">
+
+				<h1 class="col s12 center-align"><%= video.name %></h1>
+				<div class="col s12 center">
+					<video class="responsive-video" controls>
+						<source src="images/vid.mp4" type="video/mp4">
+					</video>
+				</div>
+
+			</div>
+
+		</div>
+
+	</body>
+
+</html>
