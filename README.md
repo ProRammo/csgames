@@ -20,3 +20,7 @@ The page for a video contains the following:
 * View count
 * Likes/Dislikes
 * There is a video player for the video
+
+# Other stuff
+* Looks nice
+* Responsive
