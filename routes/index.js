@@ -26,6 +26,35 @@ router.get('/videos', ensureAuthenticatedVideos, function(req, res, next){
 
 })
 
+router.get('/like/:ID', function(req, res, next) {
+
+	Video.findOne({UID: req.params.ID})
+		.exec(function(err, vid){
+			if (!vid.likes){
+				vid.likes = 0;
+			}
+			else {
+				vid.likes++;
+			}
+		});
+
+});
+
+router.get('/dislike/:ID', function(req, res, next) {
+
+	Video.findOne({UID: req.params.ID})
+		.exec(function(err, vid){
+			if (!vid.dislikes){
+				vid.dislikes = 0;
+			}
+			else {
+				vid.dislikes++;
+			}
+			res.redirect('/');
+		});
+
+});
+
 router.get('/:ID', function(req, res, next) {
 
 	Video.findOne({UID: req.params.ID})

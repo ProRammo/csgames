@@ -5,14 +5,13 @@
 
 	<body>
 
-		<%- include('partials/navbar', {links:[ {text: "Home", url:"/"}, {text: "Logout", url: "/users/logout"} ]}) %>
+		<%- include('partials/navbar', {links:[ {text: "Home", url:"/"},{text: "Videos", url:"/videos"}, {text: "Logout", url: "/users/logout"} ]}) %>
 
 		<div class="container">
 
 			<div class="row">
 
 				<h1 class="col s12 center-align"><%= username %>'s profile</h1>
-				<a href="/users/update">update profile</a>
 
 			</div>
 
