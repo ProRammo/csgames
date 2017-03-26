@@ -19,4 +19,4 @@ The page for a video contains the following:
 * Description
 * View count
 * Likes/Dislikes
-There is a video player for the video
+* There is a video player for the video
